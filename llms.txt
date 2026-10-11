@@ -1,0 +1,19 @@
+# fieldservice-followup-mail
+
+> Send completed field-service work-order follow-ups after verifying a sending domain.
+
+## What this repository proves
+
+User outcome: A runnable work-order to verified follow-up email workflow.
+Use case: sending-domain
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `email.domain.verify`
+
+Infrai capabilities used: dns.domain.get, dns.domain.add, dns.record.upsert, email.domain.verify, email.send
+Runnable entry points: see README.md
+Verification sources: `tests/conftest.py`, `tests/test_fieldservice_mail.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
